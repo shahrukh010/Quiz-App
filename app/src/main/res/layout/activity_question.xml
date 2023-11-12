@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ff6750a4"
+        app:title="Quiz App"
+        app:titleTextColor="@color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.QuestionActivity">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/question_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textStyle="normal"
+                tools:text="What country does the flag belong to?" />
+
+            <ImageView
+                android:id="@+id/image_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/image_flag"
+                tools:src="@drawable/palestine" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="9"
+                    android:indeterminate="false"
+                    android:max="10"
+                    android:minHeight="50dp"
+                    tools:progress="7" />
+
+                <TextView
+                    android:id="@+id/text_view_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_option_border_bg"
+                    android:textSize="15sp"
+                    tools:text="0/10" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/text_view_option_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/default_option_border_bg"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp"
+                tools:text="Option 1" />
+
+            <TextView
+                android:id="@+id/text_view_option_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/default_option_border_bg"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp"
+                tools:text="Option 2" />
+
+            <TextView
+                android:id="@+id/text_view_option_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/default_option_border_bg"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp"
+                tools:text="Option 3" />
+
+            <TextView
+                android:id="@+id/text_view_option_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/default_option_border_bg"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp"
+                tools:text="Option 4" />
+
+            <Button
+                android:id="@+id/button_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/default_option_border_bg"
+                android:minHeight="50dp"
+                android:text="@string/check"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
